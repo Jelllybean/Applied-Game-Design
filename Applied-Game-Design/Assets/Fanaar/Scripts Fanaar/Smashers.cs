@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Smashers : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject Smasher1;
+    public GameObject Smasher2;
+    
     void Start()
     {
         
