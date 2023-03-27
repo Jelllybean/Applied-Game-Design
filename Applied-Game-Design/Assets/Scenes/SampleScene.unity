@@ -45326,6 +45326,15 @@ PrefabInstance:
         complete
       objectReference: {fileID: 0}
     - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
+      propertyPath: deathText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
+      propertyPath: deathText.Array.data[0]
+      value: This is kind off random and chaotic isn't it? let's make it a bit more
+        complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
       propertyPath: objectsToTurnOn.Array.size
       value: 37
       objectReference: {fileID: 0}
@@ -53336,6 +53345,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
       propertyPath: deathText
+      value: Hmmm, looks like we missed something there. Maybe we should add another
+        platform to the mix?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
+      propertyPath: deathText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286992372101039297, guid: b79a69c26debe2e4e8ec18ad7831b3bd, type: 3}
+      propertyPath: deathText.Array.data[0]
       value: Hmmm, looks like we missed something there. Maybe we should add another
         platform to the mix?
       objectReference: {fileID: 0}

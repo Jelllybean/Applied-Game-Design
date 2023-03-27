@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeathBarrier : MonoBehaviour
 {
     [SerializeField] private List<GameObject> objectsToTurnOn = new List<GameObject>();
-    public string deathText;
+    public List<string> deathText = new List<string>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +19,10 @@ public class DeathBarrier : MonoBehaviour
         }
         NarrationBox.narrationBoxSingleton.TextBox.SetActive(true);
         NarrationBox.narrationBoxSingleton.alreadyActivated = true;
-        StartCoroutine(NarrationBox.narrationBoxSingleton.ShowText(deathText));
+        for (int i = 0; i < deathText.Count; i++)
+        {
+            int _random = Random.Range(0, deathText.Count);
+            StartCoroutine(NarrationBox.narrationBoxSingleton.ShowText(deathText[_random]));
+        }
     }
 }
