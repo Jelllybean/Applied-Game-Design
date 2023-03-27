@@ -22,7 +22,7 @@ public class DeathBarrier : MonoBehaviour
         for (int i = 0; i < deathText.Count; i++)
         {
             int _random = Random.Range(0, deathText.Count);
-            StartCoroutine(NarrationBox.narrationBoxSingleton.ShowText(deathText[_random]));
+            StartCoroutine(NarrationBox.narrationBoxSingleton.ShowText(deathText[_random], true));
         }
     }
 }

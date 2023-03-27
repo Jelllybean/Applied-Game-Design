@@ -29,14 +29,14 @@ public class NarrationBox : MonoBehaviour
         {
             if (!alreadyActivated)
             {
-                StartCoroutine(ShowText(null));
+                StartCoroutine(ShowText(null, true));
                 TextBox.SetActive(true);
                 alreadyActivated = true;
             }
         }
     }
 
-    public IEnumerator ShowText(string _textToSay)
+    public IEnumerator ShowText(string _textToSay, bool _autoDisable)
     {
 
         if (_textToSay == null)
@@ -60,7 +60,10 @@ public class NarrationBox : MonoBehaviour
             }
         }
 
-        Invoke("DisableBox", 8f);
+        if(_autoDisable)
+        {
+            Invoke("DisableBox", 8f);
+        }
     }
 
     public void DisableBox()
