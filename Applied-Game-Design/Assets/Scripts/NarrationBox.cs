@@ -7,10 +7,10 @@ public class NarrationBox : MonoBehaviour
     public float delay = 0.1f;
     [SerializeField] private TMP_Text textMesh;
     [SerializeField] public GameObject TextBox;
-    [SerializeField] private string fullText;
-    private string currentText = "";
+    [SerializeField] public string fullText;
+    public string currentText = "";
     public bool alreadyActivated = false;
-
+    public bool isTyping;
     public static NarrationBox narrationBoxSingleton;
 
     private void Awake()
@@ -42,7 +42,7 @@ public class NarrationBox : MonoBehaviour
         if (_textToSay == null)
         {
             for (int i = 0; i < fullText.Length; i++)
-            {
+            {   
                 currentText = fullText.Substring(0, i + 1);
                 currentText = _textToSay.Substring(0, i + 1);
                 textMesh.text = currentText;
@@ -51,13 +51,17 @@ public class NarrationBox : MonoBehaviour
         }
         else
         {
+            isTyping = true;
             for (int i = 0; i < _textToSay.Length; i++)
             {
-
-                currentText = _textToSay.Substring(0, i + 1);
-                textMesh.text = currentText;
-                yield return new WaitForSeconds(delay);
+                if (isTyping == true)
+                {
+                    currentText = _textToSay.Substring(0, i + 1);
+                    textMesh.text = currentText;
+                    yield return new WaitForSeconds(delay);
+                }
             }
+            isTyping = false;
         }
 
         if(_autoDisable)
