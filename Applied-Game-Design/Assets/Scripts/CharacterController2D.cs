@@ -36,7 +36,7 @@ public class CharacterController2D : MonoBehaviour
     public GameObject deathAnimationPrefab;
     private float verticalMovement;
     private Vector2 moveDirection;
-    [SerializeField] private Transform startingPosition;
+    public Transform startingPosition;
 
     private bool canSpinAttack;
     [SerializeField] private bool isGrounded;
